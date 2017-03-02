@@ -2,6 +2,7 @@
   "name": "dsl-generated-dependencies",
   "dependencies": {
     "bootstrap-sass-official": "latest",
+    "font-awesome": "latest",
     "angular-mocks": "~> 1.5",
     "angular-route": "latest",
     "angular-resource": "~> 1.5",
