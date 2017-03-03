@@ -9,9 +9,9 @@ app.config([
     }).when("/portfolio", {
     	controller: "PortfolioController",
     	templateUrl: "portfolio.html"
-    }).when("/about", {
-    	controller: "AboutController",
-    	templateUrl: "about.html"
+    }).when("/contact", {
+    	controller: "ContactController",
+    	templateUrl: "contact.html"
     });
   }
 ]);
@@ -44,10 +44,10 @@ app.controller("PortfolioController",[
   }
  ]);
 
-app.controller("AboutController",[
+app.controller("ContactController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
-  	$http.get("/about");
+  	$http.get("/contact");
   }
  ]);
 
