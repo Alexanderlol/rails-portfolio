@@ -9,6 +9,9 @@ app.config([
     }).when("/portfolio", {
     	controller: "PortfolioController",
     	templateUrl: "portfolio.html"
+    }).when("/about", {
+    	controller: "AboutController",
+    	templateUrl: "about.html"
     });
   }
 ]);
@@ -17,7 +20,21 @@ app.controller("HomeController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
   	$http.get("/");
-  }
+  	$scope.updates = ['<br><br><br>Hi, my name is Alex.<br>Discover who I am'];
+        $(function(){
+            $(".update-box p").typed({
+              strings:$scope.updates,
+              typeSpeed: 50,
+              loop: false,
+             // backSpeed: 50,
+             // backDelay: 300,
+              contentType: 'html',
+              loopCount: false,
+              showCursor: false,
+              cursorChar: "|"
+            });
+          }); 
+  	}
  ]);
 
 app.controller("PortfolioController",[
@@ -26,3 +43,11 @@ app.controller("PortfolioController",[
   	$http.get("/portfolio");
   }
  ]);
+
+app.controller("AboutController",[
+          "$scope","$http","$location",
+  function($scope, $http, $location){
+  	$http.get("/about");
+  }
+ ]);
+
