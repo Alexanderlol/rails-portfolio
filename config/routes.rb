@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 	root :to => "home#index"
 	get "*unmatched_route" => "home#index"
 	get "portfolio", to: "portfolio#index" 
-	resources :contact
+	get "contact", to: "contacts#new"
 end

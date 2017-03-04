@@ -10,9 +10,10 @@ app.config([
     	controller: "PortfolioController",
     	templateUrl: "portfolio.html"
     }).when("/contact", {
-    	controller: "ContactController",
-    	templateUrl: "contact.html"
+      controller: "ContactController",
+      templateUrl: "contact.html"
     });
+    
   }
 ]);
 
@@ -40,14 +41,14 @@ app.controller("HomeController",[
 app.controller("PortfolioController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
-  	$http.get("/portfolio");
+  	$http.get("/");
   }
  ]);
 
 app.controller("ContactController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
-  	$http.get("/contact");
+  	$http.get("/");
   }
  ]);
 
