@@ -1,12 +1,20 @@
 <article ng-app="webApp">
-	<section class="et-hero-tabs" ng-view>
-		<div class="et-hero-tabs-container">
-			<a class="et-hero-tab" href="#">Home</a>
-			<a class="et-hero-tab" href="#portfolio">Portfolio</a>
-			<a class="et-hero-tab" href="#portfolio">Blog</a>
-			<a class="et-hero-tab" href="#portfolio">About</a>
-			<a class="et-hero-tab" href="#contact">Contact</a>
-			<span class="et-hero-tab-slider"></span>
-		</div>
-	</section>
+	<div ng-view></div>
+	<ul>
+	  <li>
+	    <a href="#" class="spotify"><span>Home</span><i class="entypo-home"></i></a>
+	  </li>
+	  <li>
+	    <a href="#portfolio" class="soundcloud"><span>Projects</span><i class="entypo-code"></i></a>
+	  </li>
+	  <li>
+	    <a href="#contact" class="skype"><span>Contact</span><i class="entypo-direction"></i></a>
+	  </li>
+	  <li>
+	    <a href="#" class="dribbble"><span>Github</span><i class="entypo-github"></i></a>
+	  </li>
+	  <li>
+	    <a href="#" class="spotify"><span>LinkedIn</span><i class="entypo-linkedin"></i></a>
+	  </li>
+	</ul>
 </article>

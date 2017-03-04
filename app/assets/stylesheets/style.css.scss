@@ -1,8 +1,7 @@
 .jumbotron {
-	position: relative;
 	background: url("homeJumbo.jpg") center center;
-	width:100%;
-	height: 100%;
+	width: 100%;
+	height: 900px;
 	background-size: cover;
 }
 .button {
@@ -15,94 +14,146 @@
     color: white;
 }
 
-.widewrapper {
-  width:100%;
- }
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+section {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
 
 body {
-		font-family: "Century Gothic", 'Lato', sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  font-weight: 600;
+  background: #f0f0f0;
 }
 
-a {
-	text-decoration: none;
+ul {
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  li {
+    a {
+      display: block;
+      margin-left: -2px;
+      height: 60px;
+      width: 60px;
+      border-radius: 0 25px 25px 0;
+      border: 2px solid #000;
+      background: #FFF;
+      margin-bottom: 1em;
+      transition: all .4s ease;
+      color: #2980b9;
+      text-decoration: none;
+      line-height: 60px;
+      position: relative;
+      &:hover {
+        cursor: pointer;
+        width: 180px;
+        color: #fff;
+        span {
+          left: 0;
+        }
+      }
+      span {
+        padding: 0 30px 0 15px;
+        position: absolute;
+        left: -120px;
+        transition: left .4s ease;
+      }
+      i {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+      }
+    }
+    .spotify {
+      background: rgba(#27ae60, .1);
+      border-color: #27ae60;
+      color: #27ae60;
+      &:hover {
+        background: rgba(#27ae60, 1);
+      }
+    }
+    .soundcloud {
+      background: rgba(#e67e22, .1);
+      border-color: #e67e22;
+      color: #e67e22;
+      &:hover {
+        background: rgba(#e67e22, 1);
+      }
+    }
+    .skype {
+      background: rgba(#22A7F0, .1);
+      border-color: #22A7F0;
+      color: #22A7F0;
+      &:hover {
+        background: rgba(#22A7F0, 1);
+      }
+    }
+    .dribbble {
+      background: rgba(#D2527F, .1);
+      border-color: #D2527F;
+      color: #D2527F;
+      &:hover {
+        background: rgba(#D2527F, 1);
+      }
+    }
+  }
 }
 
-.et-hero-tabs,
-.et-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-    background: #eee;
-		text-align: center;
-		padding: 0 2em;
-    h1 {
-        font-size: 2rem;
-        margin: 0;
-        letter-spacing: 1rem;
-    }
-    h3 {
-        font-size: 1rem;
-        letter-spacing: 0.3rem;
-        opacity: 0.6;
-    }
+
+/* entypo */
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
 }
 
-.et-hero-tabs-container {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 70px;
-    opacity: 0.5;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    z-index: 10;
-    &--top {
-        position: fixed;
-        top: 0;
+.test {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  h1 {
+    font-weight: 600;
+    font-size: 2.4em;
+    color: #303030;
+    margin-bottom: .5em;
+  }
+  
+  p {
+    color: #999;
+    font-weight: 400;
+    font-size: 1.2em;
+  }
+  
+  a {
+    color: #4183D7;
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 2px;
+    border-bottom: 2px dotted #4183D7;
+    transition: all .25s ease;
+    &:hover {
+      color: #D2527F;
+      border-color: #D2527F;
     }
-}
-
-.et-hero-tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    color: #000;
-    letter-spacing: 0.1rem;
-		transition: all 0.5s ease;
-		font-size: 0.8rem;
-	  &:hover {
-			color:white;
-      background: rgba(102,177,241,0.8);
-			transition: all 0.5s ease;
-    }
-}
-
-.et-hero-tab-slider {
-    position: absolute;
-    bottom: 0;
-    width: 0;
-    height: 6px;
-    background: #66B1F1;
-    transition: left 0.3s ease;
-}
-
-@media (min-width: 800px) {
-	.et-hero-tabs,
-	.et-slide {
-    h1 {
-        font-size: 3rem;
-    }
-    h3 {
-        font-size: 1rem;
-    }
-	}
-	.et-hero-tab {
-		font-size: 1rem;
-	}
+  }
 }
