@@ -1,11 +1,5 @@
 class ContactsController < ApplicationController
 	skip_before_action :verify_authenticity_token
-	def index
-		respond_to do |format|
-			format.html {}
-			format.json {render json: @contact}
-		end
-	end
 	def new
 	  @contact = Contact.new
 	end
@@ -21,6 +15,11 @@ class ContactsController < ApplicationController
 	     redirect_to new_contact_path, notice: "Error occured."
 	  end
 	end
+
+	def logThis
+		puts "yo test 123 123"
+	end
+	
 	private
 	  def contact_params
 	     params.require(:contact).permit(:name, :email, :comments)
