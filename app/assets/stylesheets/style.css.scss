@@ -4,6 +4,7 @@
 	height: 900px;
 	background-size: cover;
 }
+
 .button {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
@@ -28,6 +29,8 @@
 
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import "bootstrap-sprockets";
+
 *,
 *:before,
 *:after {
