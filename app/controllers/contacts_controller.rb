@@ -10,16 +10,18 @@ class ContactsController < ApplicationController
 		email = params[:contact][:email]
 		body = params[:contact][:comments]
 		ContactMailer.contact_email(name, email, body).deliver
-	     redirect_to new_contact_path, notice: "Message sent."
+		 flash[:success] = "Message Sent"
+	     redirect_to contacts_path, notice: "Message sent."
 	  else
-	     redirect_to new_contact_path, notice: "Error occured."
+	  	 flash[:danger] = @contact.error.full_messages.join(", ")
+	     redirect_to contacts_path, notice: "Error occured."
 	  end
 	end
 
 	def logThis
 		puts "yo test 123 123"
 	end
-	
+
 	private
 	  def contact_params
 	     params.require(:contact).permit(:name, :email, :comments)
