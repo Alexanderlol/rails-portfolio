@@ -9,6 +9,29 @@
   </head>
 
   <body>
+  	<ul>
+	  <li>
+	    <a href="/" class="spotify"><span>Home</span><i class="entypo-home"></i></a>
+	  </li>
+	  <li>
+	    <a href="/portfolio" class="soundcloud"><span>Projects</span><i class="entypo-code"></i></a>
+	  </li>
+	  <li>
+	    <a href="/contact" class="skype"><span>Contact</span><i class="entypo-direction"></i></a>
+	  </li>
+	  <li>
+	    <a href="#" class="dribbble"><span>Github</span><i class="entypo-github"></i></a>
+	  </li>
+	  <li>
+	    <a href="#" class="spotify"><span>LinkedIn</span><i class="entypo-linkedin"></i></a>
+	  </li>
+	</ul>
+
+	<div class="container flash-container">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -1,7 +1,3 @@
 asset 'bootstrap-sass-official'
 asset 'font-awesome'
 asset 'typed-js'
-asset 'angular-mocks', '~> 1.5'
-asset 'angular-route'
-asset 'angular-resource', '~> 1.5'
-asset 'angular', '~> 1.5'

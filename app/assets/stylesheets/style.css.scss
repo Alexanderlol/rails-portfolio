@@ -14,6 +14,18 @@
     color: white;
 }
 
+.flash-container {
+  position: absolute;
+  width: 100%;
+}
+
+.alert-notice, .alert-alert {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  margin-top: -14px;
+}
+
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 *,
