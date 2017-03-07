@@ -18,10 +18,6 @@ class ContactsController < ApplicationController
 	  end
 	end
 
-	def logThis
-		puts "yo test 123 123"
-	end
-
 	private
 	  def contact_params
 	     params.require(:contact).permit(:name, :email, :comments)
