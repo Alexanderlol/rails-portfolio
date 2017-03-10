@@ -1,15 +1,14 @@
 .jumbotron {
-	/*background: url(".jpg") center center;*/
-  background-color: blue;
+	/*background: url("conglom.jpg");*/
 	width: 100%;
 	height: 900px;
-	background-size: cover;
+	background-size: 100% 100%;
 }
 
 .typed-font{
   font-family: 'Raleway', sans-serif !important;
   font-size: 34px !important;
-  font-weight: lighter !important;
+  font-weight: thin, lighter !important;
 
 }
 
@@ -18,15 +17,15 @@
     transition-duration: 0.4s;
 }
 
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
 .btn-default {
   color: #000000 !important;
   border-color: #000000 !important;
   border-width: medium !important;
-}
-
-.button:hover {
-    background-color: #4CAF50; /* Green */
-    color: white;
 }
 
 .flash-container {
@@ -119,23 +118,23 @@ ul {
         font-size: 1.5em;
       }
     }
-    .spotify {
-      background: rgba(#27ae60, .1);
-      border-color: #27ae60;
-      color: #27ae60;
+    .cust-nav {
+      background: rgba(#07575b, .1);
+      border-color: #66a5ad;
+      color: #07575b;
       &:hover {
-        background: rgba(#27ae60, 1);
+        background: rgba(#07575b, 1);
       }
     }
-    .soundcloud {
-      background: rgba(#e67e22, .1);
-      border-color: #e67e22;
-      color: #e67e22;
+    /*.projects {
+      background: rgba(#003b46, .1);
+      border-color: #c4dfe6;
+      color: #003b46;
       &:hover {
-        background: rgba(#e67e22, 1);
+        background: rgba(#003b46, 1);
       }
     }
-    .skype {
+    .contact {
       background: rgba(#22A7F0, .1);
       border-color: #22A7F0;
       color: #22A7F0;
@@ -143,14 +142,14 @@ ul {
         background: rgba(#22A7F0, 1);
       }
     }
-    .dribbble {
+    .blog {
       background: rgba(#D2527F, .1);
       border-color: #D2527F;
       color: #D2527F;
       &:hover {
         background: rgba(#D2527F, 1);
       }
-    }
+    }*/
   }
 }
 
