@@ -9,6 +9,9 @@ app.config([
     }).when("/portfolio", {
     	controller: "PortfolioController",
     	templateUrl: "portfolio.html"
+    }).when("/blog", {
+      controller: "BlogController",
+      templateUrl: "blog.html"
     }).when("/contact", {
       controller: "ContactController",
       templateUrl: "contact.html"
@@ -39,6 +42,12 @@ app.controller("HomeController",[
  ]);
 
 app.controller("PortfolioController",[
+          "$scope","$http","$location",
+  function($scope, $http, $location){
+  }
+ ]);
+
+app.controller("BlogController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
   }
