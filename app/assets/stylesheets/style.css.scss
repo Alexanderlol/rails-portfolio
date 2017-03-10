@@ -6,9 +6,22 @@
 	background-size: cover;
 }
 
+.typed-font{
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 34px !important;
+  font-weight: lighter !important;
+
+}
+
 .button {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+}
+
+.btn-default {
+  color: #000000 !important;
+  border-color: #000000 !important;
+  border-width: medium !important;
 }
 
 .button:hover {
@@ -28,8 +41,8 @@
   margin-top: -14px;
 }
 
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
+/*@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url('https://fonts.googleapis.com/css?family=Quicksand');*/
 
 *,
 *:before,
@@ -38,7 +51,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 12px;
 }
 
 section {
@@ -48,11 +61,19 @@ section {
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
   font-size: 1em;
   line-height: 1.6;
   font-weight: 600;
   background: #f0f0f0;
+}
+
+h1, h2, h3 {
+  font-family: 'Raleway', sans-serif !important;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: normal;
 }
 
 ul {
@@ -136,16 +157,17 @@ ul {
 
 /* entypo */
 
-[class*="entypo-"]:before {
+/*[class*="entypo-"]:before {
   font-family: 'entypo', sans-serif;
-}
+}*/
 
-.test {
+/*.test {
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%);
+
   h1 {
     font-weight: 600;
     font-size: 2.4em;
@@ -171,4 +193,4 @@ ul {
       border-color: #D2527F;
     }
   }
-}
+}*/
