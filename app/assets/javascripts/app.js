@@ -9,9 +9,6 @@ app.config([
     }).when("/portfolio", {
     	controller: "PortfolioController",
     	templateUrl: "portfolio.html"
-    }).when("/blog", {
-      controller: "BlogController",
-      templateUrl: "blog.html"
     }).when("/contact", {
       controller: "ContactController",
       templateUrl: "contact.html"
@@ -24,7 +21,7 @@ app.controller("HomeController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
   	$http.get("/");
-  	$scope.updates = ['<br><br><br>Hi, my name is Alex.<br>Discover who I am'];
+  	$scope.updates = ['<br><br><br>Hi, my name is Alex.<br>Check out some of my work!'];
         $(function(){
             $(".update-box p").typed({
               strings:$scope.updates,
@@ -42,12 +39,6 @@ app.controller("HomeController",[
  ]);
 
 app.controller("PortfolioController",[
-          "$scope","$http","$location",
-  function($scope, $http, $location){
-  }
- ]);
-
-app.controller("BlogController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
   }
