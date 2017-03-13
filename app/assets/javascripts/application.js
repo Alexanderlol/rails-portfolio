@@ -17,5 +17,6 @@
 //= require angular-resource
 //= require angular-rails-templates
 //= require typed-js
+//= require angular-animate
 //= require_tree ./templates
 //= require_tree .

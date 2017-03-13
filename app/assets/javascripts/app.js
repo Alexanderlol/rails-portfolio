@@ -1,4 +1,4 @@
-var app = angular.module('webApp', ['ngRoute', 'templates']);
+var app = angular.module('webApp', ['ngRoute', 'templates', 'ngAnimate']);
 
 app.config([
            "$routeProvider",
@@ -20,7 +20,7 @@ app.config([
 app.controller("HomeController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
-  	$http.get("/");
+  	$scope.pageClass = '/page-home';
   	$scope.updates = ['<br><br><br>Hi, my name is Alex.<br>I am an independant web developer.'];
         $(function(){
             $(".update-box p").typed({
@@ -41,11 +41,13 @@ app.controller("HomeController",[
 app.controller("PortfolioController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
+    $scope.pageClass = '/page-portfolio';
   }
  ]);
 
 app.controller("ContactController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
+    $scope.pageClass = '/page-contact';
   }
  ]);

@@ -190,6 +190,42 @@ ul {
   }
 }
 
+.page        {
+    bottom:0;
+    padding-top: 0px;
+    position:absolute;
+    text-align:center;
+    top:0;
+    width:100%;
+}
+
+.page-home        { background:#FFFFFF; color:#000000; }
+.page-portfolio   { background:#FFFFFF; color:#000000; }
+.page-contact     { background:#FFFFFF; color:#000000; }
+
+@keyframes fadeOut {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@keyframes fadeIn {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+.ng-enter      { animation: fadeIn 0.5s both ease-in; }
+
+.ng-leave      { animation: fadeOut 0.5s both ease-in; }
+
+.page-home.ng-enter      { animation:fadeIn 0.5s both ease-in; }
+.page-home.ng-leave      { animation:fadeOut 0.5s both ease-in; }
+
+.page-portfolio.ng-enter     { animation:fadeIn 0.5s both ease-in; }
+.page-portfolio.ng-leave     { animation:fadeOut 0.5s both ease-in; }
+
+.page-contact.ng-enter     { animation:fadeIn 0.5s both ease-in; }
+.page-contact.ng-leave     { animation:fadeOut 0.5s both ease-in; }
+
 
 /* entypo */
 
