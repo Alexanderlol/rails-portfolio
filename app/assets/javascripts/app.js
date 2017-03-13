@@ -21,7 +21,7 @@ app.controller("HomeController",[
           "$scope","$http","$location",
   function($scope, $http, $location){
   	$http.get("/");
-  	$scope.updates = ['<br><br><br>Hi, my name is Alex.<br>Check out some of my work!'];
+  	$scope.updates = ['<br><br><br>Hi, my name is Alex.<br>I am an independant web developer.'];
         $(function(){
             $(".update-box p").typed({
               strings:$scope.updates,
