@@ -2,11 +2,10 @@
   "name": "dsl-generated-dependencies",
   "dependencies": {
     "bootstrap-sass-official": "latest",
-    "font-awesome": "latest",
     "typed-js": "latest",
     "angular-animate": "~>1.5",
     "angular-mocks": "~> 1.5",
-    "angular-route": "latest",
+    "angular-route": "~>1.5",
     "angular-resource": "~> 1.5",
     "angular": "~> 1.5"
   }

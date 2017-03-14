@@ -1,11 +1,9 @@
-Typed.js
+<img src="/logo-cropped.png" width="450px" title="Typed.js" />
 ========
 
 [View the live demo](http://www.mattboldt.com/demos/typed-js/) | [Go to my site, mattboldt.com](http://www.mattboldt.com)
 
-Typed.js is a jQuery plugin that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.
-
----
+Typed.js is a library that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.
 
 Looking for some custom use cases for Typed.js? [Check out the wiki](https://github.com/mattboldt/typed.js/wiki)
 
@@ -14,6 +12,23 @@ Looking for some custom use cases for Typed.js? [Check out the wiki](https://git
 Installation
 ------------
 This is really all you need to get going.
+
+~~~ javascript
+<script src="typed.js"></script>
+<script>
+	document.addEventListener("DOMContentLoaded", function(){
+		Typed.new(".element", {
+			strings: ["First sentence.", "Second sentence."],
+			typeSpeed: 0
+		});
+	});
+</script>
+...
+
+<span class="element"></span>
+~~~
+
+Or you can use jQuery:
 
 ~~~ javascript
 <script src="jquery.js"></script>
@@ -89,18 +104,16 @@ http://www.trelab.fi/en/
 
 http://jessejohnson.github.io/
 
-http://patrickelhage.com/
 
-http://tairemadailey.com/
-
+---
 
 ### HTML tags
 
 By default the content type is set to `html`, so you're good to go. Want to type out the html regularly? Set it to `text`.
 
 ~~~ javascript
-$(".element").typed({
-	strings: ["Typed.js is a <strong>jQuery</strong> plugin."],
+Typed.new(".element", {
+	strings: ["Typed.js is an <strong>Awesome</strong> library."],
 	contentType: 'html' // or 'text'
 });
 ~~~
@@ -111,9 +124,9 @@ This allows bots and search engines, as well as users with JavaScript disabled, 
 
 ~~~ javascript
 <script>
-	$(function(){
-		$("#typed").typed({
-			stringsElement: $('#typed-strings')
+	document.addEventListener('DOMContentLoaded', function(){
+		Typed.new('#typed', {
+			stringsElement: document.getElementById('typed-strings')
 		});
 	});
 </script>
@@ -121,7 +134,7 @@ This allows bots and search engines, as well as users with JavaScript disabled, 
 You must wrap each string in the `typed-strings` div with a `<p>`
 ~~~ html
 <div id="typed-strings">
-    <p>Typed.js is a <strong>jQuery</strong> plugin.</p>
+    <p>Typed.js is an <strong>Awesome</strong> library.</p>
     <p>It <em>types</em> out sentences.</p>
 </div>
 <span id="typed"></span>
@@ -132,7 +145,7 @@ You must wrap each string in the `typed-strings` div with a `<p>`
 #### `contentType: 'html'`
 
 ~~~ javascript
-$(".typed").typed({ strings: ["Sentence with <br>line break."] });
+Typed.new(".typed", { strings: ["Sentence with <br>line break."] });
 ~~~
 
 #### `contentType: 'text'`
@@ -145,7 +158,7 @@ Use `white-space: pre` in your typed text element, and then `\n` when typing out
 
 ...
 
-$(".typed").typed({ strings: ["Sentence with a\nline break."] });
+Typed.new(".element", { strings: ["Sentence with a\nline break."] });
 
 ~~~
 
@@ -154,14 +167,10 @@ $(".typed").typed({ strings: ["Sentence with a\nline break."] });
 You can pause in the middle of a string for a given amount of time by including an escape character.
 
 ~~~ javascript
-<script>
-	$(function(){
-		$(".element").typed({
-			// Waits 1000ms after typing "First"
-			strings: ["First ^1000 sentence.", "Second sentence."]
-		});
-	});
-</script>
+Typed.new(".element", {
+	// Waits 1000ms after typing "First"
+	strings: ["First ^1000 sentence.", "Second sentence."]
+});
 ~~~
 
 
@@ -169,45 +178,41 @@ Customization
 ----
 
 ~~~ javascript
-<script>
-	$(function(){
-		$(".element").typed({
-			strings: ["First sentence.", "Second sentence."],
-			// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-			stringsElement: null,
-			// typing speed
-			typeSpeed: 0,
-			// time before typing starts
-			startDelay: 0,
-			// backspacing speed
-			backSpeed: 0,
-			// shuffle the strings
- +        		shuffle: false,
-			// time before backspacing
-			backDelay: 500,
-			// loop
-			loop: false,
-			// false = infinite
-			loopCount: false,
-			// show cursor
-			showCursor: true,
-			// character for cursor
-			cursorChar: "|",
-			// attribute to type (null == text)
-			attr: null,
-			// either html or text
-			contentType: 'html',
-			// call when done callback function
-			callback: function() {},
-			// starting callback function before each string
-			preStringTyped: function() {},
-			//callback for every typed string
-			onStringTyped: function() {},
-			// callback for reset
-			resetCallback: function() {}
-		});
-	});
-</script>
+Typed.new(".element", {
+	strings: ["First sentence.", "Second sentence."],
+	// Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+	stringsElement: null,
+	// typing speed
+	typeSpeed: 0,
+	// time before typing starts
+	startDelay: 0,
+	// backspacing speed
+	backSpeed: 0,
+	// shuffle the strings
+	shuffle: false,
+	// time before backspacing
+	backDelay: 500,
+	// loop
+	loop: false,
+	// false = infinite
+	loopCount: false,
+	// show cursor
+	showCursor: true,
+	// character for cursor
+	cursorChar: "|",
+	// attribute to type (null == text)
+	attr: null,
+	// either html or text
+	contentType: 'html',
+	// call when done callback function
+	callback: function() {},
+	// starting callback function before each string
+	preStringTyped: function() {},
+	//callback for every typed string
+	onStringTyped: function() {},
+	// callback for reset
+	resetCallback: function() {}
+});
 ~~~
 
 
