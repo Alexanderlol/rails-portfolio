@@ -156,11 +156,12 @@ ul {
       }
     }
     .cust-nav {
-      background: rgba(#FFF, .1);
-      border-color: #000;
-      color: #000;
+      background: rgba(#1c1b1b, .1);
+      border-color: #1c1b1b;
+      color: #1c1b1b;
       &:hover {
-        background: rgba(#000, 1);
+        background: rgba(#1c1b1b, 1);
+        opacity: 0.8;
       }
     }
     /*.projects {
