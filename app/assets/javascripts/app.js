@@ -25,10 +25,10 @@ app.controller("HomeController",[
         $(function(){
             $(".update-box p").typed({
               strings:$scope.updates,
-              typeSpeed: 50,
+              typeSpeed: 40,
               loop: false,
-             // backSpeed: 50,
-             // backDelay: 300,
+              backSpeed: 50,
+              backDelay: 300,
               contentType: 'html',
               loopCount: false,
               showCursor: false,
