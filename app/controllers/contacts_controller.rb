@@ -7,14 +7,14 @@ class ContactsController < ApplicationController
 	  @contact = Contact.new(contact_params)
 	  if @contact.save
 	  	name = params[:contact][:name]
-		email = params[:contact][:email]
-		body = params[:contact][:comments]
+		  email = params[:contact][:email]
+		  body = params[:contact][:comments]
 		ContactMailer.contact_email(name, email, body).deliver
 		 flash[:success] = "Message Sent"
-	     redirect_to root_path, notice: "Message sent."
+	     redirect_to '/#/contact'
 	  else
-	  	 flash[:danger] = @contact.error.full_messages.join(", ")
-	     redirect_to root_path, notice: "Error occured."
+	  	 flash[:danger] = @contact.errors.full_messages.join(", ")
+	     redirect_to '/#/contact'
 	  end
 	end
 
